@@ -10,7 +10,7 @@ load_data:
   preprocessed_data: data/preprocessed
   full_path: "Deep Learning/data_source"
 train: 
-  split_ration: 0.80
+  split_ratio: 0.80
 
 model:
   name: VGG19
