@@ -7,7 +7,7 @@ raw_data:
 load_data:
   num_classes: 4
   raw_data: data_source
-  preprossed_data: data/preprossed
+  preprocessed_data: data/preprocessed
   full_path: "Deep Learning/data_source"
 train: 
   split_ration: 0.80
@@ -42,4 +42,3 @@ m1flow_config:
   run_name: mlops
   register_model_name: Deep_Learning_model
   remote_server_uri: http://localhost:5000
-  

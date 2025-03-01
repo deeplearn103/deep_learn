@@ -8,3 +8,4 @@ seaborn
 tensorflow
 joblib
 PyYaml
+keras
