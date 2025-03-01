@@ -9,3 +9,4 @@ tensorflow
 joblib
 PyYaml
 keras
+keras_preprocessing
