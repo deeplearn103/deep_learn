@@ -1,0 +1,7 @@
+pandas
+numpy
+keras
+joblib
+tensorflow
+keras_preprocessing
+mlflow

@@ -91,11 +91,12 @@ def train_model_mlflow(config_file):
 
             train_loss = history.history['loss']
             val_loss = history.history['val_loss']
+            val_acc = history.history['val_accuracy']
             
             mlflow.log_param('epochs', epochs)
             mlflow.log_param('loss', loss)
             mlflow.log_param('val_loss', val_loss)
-            mlflow.log_param("metrics", metrics)
+            mlflow.log_param("metrics", val_acc)
             
             tracking_url_type_store = urlparse(mlflow.get_artifact_uri()).scheme
             if tracking_url_type_store != "file":
