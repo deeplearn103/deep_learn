@@ -29,4 +29,4 @@ ENV STREAMLIT_SERVER_PORT=8501
 EXPOSE 8501
 
 #Run the app
-CMD ["streamlit", "run", "app.py", "--server.port=8501",'--server.address=0.0.0.0']
+CMD ["streamlit", "run", "webapp/app.py", "--server.port=8501",'--server.address=0.0.0.0']
