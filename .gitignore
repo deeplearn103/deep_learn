@@ -93,3 +93,6 @@ data_source/
 
 
 .venv/
+
+#model
+/model/
