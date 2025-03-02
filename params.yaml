@@ -14,14 +14,14 @@ train:
 
 model:
   name: VGG19
-  trainable: True
+  trainable: False
   train_path: data/preprocessed/train
   test_path: data/preprocessed/test
   image_size: [255, 255]
   loss: 'categorical_crossentropy'
   optimizer: 'adam'
   metrics: ['accuracy']
-  epochs: 25
+  epochs: 1
   #batch_size: 32
   save_dir: model/trained.h5
 
@@ -36,7 +36,7 @@ img_augment:
 
 model_dir: models
 
-m1flow_config:
+mlflow_config:
   artifact_dir: artifacts
   experiment_name: Deep_Learning_VGG19
   run_name: mlops
