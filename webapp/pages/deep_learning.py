@@ -33,7 +33,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Make sure the model path is correct relative to this file
-model = load_model("../model/trained.h5")
+model = load_model("model/trained.h5")
 
 # Class Labels
 classes = ['no_tumor', 'pituitary_tumor', 'meningioma_tumor', 'glioma_tumor']
@@ -78,7 +78,7 @@ uploaded_file = st.sidebar.file_uploader("Choose an MRI image", type=["png", "jp
 
 if uploaded_file:
     image = Image.open(uploaded_file)
-    st.image(image, caption="Uploaded MRI Scan", use_column_width=True)
+    st.image(image, caption="Uploaded MRI Scan", use_container_width=True)
 
     if st.button("classify image"):
         input_tensor = preprocess_image(image)
@@ -94,7 +94,7 @@ if uploaded_file:
             st.info(f"Confidence: {confidence:.2f}%")
         with col2:
             gradcam_image = generate_gradcam(image, model)
-            st.image(gradcam_image, caption="Grad-CAM Visualisation", use_column_width=True)
+            st.image(gradcam_image, caption="Grad-CAM Visualisation", use_container_width=True)
         
         # Download Report
         st.markdown(download_report(pred_class, confidence), unsafe_allow_html=True)
